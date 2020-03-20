@@ -1,0 +1,26 @@
+package com.becb.app.ws.service;
+
+import java.util.UUID;
+
+import org.springframework.stereotype.Service;
+
+import com.becb.app.ws.model.UserDetailsRequestModel;
+import com.becb.app.ws.model.response.UserRest;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	public UserRest createUser(UserDetailsRequestModel userDetails) {
+		UserRest returnRest = new UserRest();
+
+		returnRest.setEmail(userDetails.getEmail());
+		returnRest.setFirstName(userDetails.getFirstName());
+		returnRest.setLastName(userDetails.getLastName());
+
+		returnRest.setUserId(UUID.randomUUID().toString());
+	
+		
+		return returnRest;
+	}
+
+}

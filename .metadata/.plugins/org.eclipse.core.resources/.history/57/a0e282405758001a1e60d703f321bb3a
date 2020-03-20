@@ -1,0 +1,35 @@
+package com.becb.app.ws.model;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+/**
+ * Classe siilar a userDetailRequestModel, porém com menos campos a serem validadod
+ * @author fredb
+ *
+ */
+public class UptateUserDetailsRequestModel {
+
+	@NotNull(message="coloca um nome ai")
+	private String firstName;
+	
+	@Size(min=3, message="coloca algo maior que 3, que tal?")
+	private String lastName;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	
+}

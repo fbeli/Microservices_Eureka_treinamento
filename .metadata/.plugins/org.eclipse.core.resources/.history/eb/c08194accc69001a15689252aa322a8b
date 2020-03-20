@@ -1,0 +1,13 @@
+package br.com.becb;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class TreinamentoAccountManagementApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

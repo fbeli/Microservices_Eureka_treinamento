@@ -1,0 +1,5 @@
+package com.becb.app.ws.model;
+
+public class UptateUserDetailsRequestModel {
+
+}

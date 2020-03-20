@@ -1,0 +1,10 @@
+package com.becb.app.ws.service;
+
+import com.becb.app.ws.model.UserDetailsRequestModel;
+import com.becb.app.ws.model.response.UserRest;
+
+
+public interface UserServiceInterface {
+
+	UserRest createUser(UserDetailsRequestModel userDetail);
+}
