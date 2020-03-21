@@ -8,11 +8,11 @@
 		<version>2.1.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.becb</groupId>
-	<artifactId>Treinamento_AccountManagement</artifactId>
+	<groupId>br.com.becb.zuul</groupId>
+	<artifactId>Treinamento_ZuulApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Treinamento_AccountManagement</name>
-	<description>Account Management</description>
+	<name>Treinamento_ZuulApi</name>
+	<description>ZuluApi</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -28,6 +28,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -39,6 +43,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+			
 		</dependency>
 	</dependencies>
 
