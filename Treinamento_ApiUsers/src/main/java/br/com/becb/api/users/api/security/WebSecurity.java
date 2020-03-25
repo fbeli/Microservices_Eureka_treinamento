@@ -44,20 +44,13 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		
 		//pelo ip - lendo a propriedade do arquivo de propriedades 
 		//configurando somente vindo do zuul (local)
-		System.out.println("IP cadastrado para Origem: "+env.getProperty("gateway.ip"));
-		
-		
-		//http.authorizeRequests().antMatchers("/**")
-		//	.access("hasIpAddress('127.0.0.1/32') or hasIpAddress(env.getProperty('gateway.ip')");
-		//.and().addFilter(getAuthenticationFilter());
-		
 		//http.authorizeRequests().antMatchers("/**").hasIpAddress(env.getProperty("gateway.ip"))
-		//	.and().addFilter(getAuthenticationFilter());
 		
 		http.authorizeRequests().antMatchers("/tokens").access(
-	            "hasIpAddress('10.0.0.0/16') or hasIpAddress('127.0.0.1/32')")
+	            "hasIpAddress('10.0.0.0/16') or "
+	            + "hasIpAddress('127.0.0.1/32') or "
+	            + "hasIpAddress(env.getProperty('gateway.ip')")
 		.and().addFilter(getAuthenticationFilter());
-	//	http.authorizeRequests().antMatchers("/**").access("hasIpAddress('127.0.0.1')  ");		
 		
 		http.headers().frameOptions().disable();
 	
@@ -66,7 +59,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		AuthenticationFilter authenticationFilter = 
 				new AuthenticationFilter(userService, env,authenticationManager());
 		
-		//authenticationFilter.setAuthenticationManager(authenticationManager());
+		//alterando a url de login, default é /login e alteramos para /users/login
+		authenticationFilter.setFilterProcessesUrl(env.getProperty("login.url.path"));
 		return authenticationFilter;
 		
 	}
