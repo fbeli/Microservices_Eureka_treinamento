@@ -1,20 +1,16 @@
-package br.com.becb.api.users.api.users.shared;
+package br.com.becb.api.users.api.model;
 
-import java.io.Serializable;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+public class CreateUserResponseModel {
 
-public class UserDto implements Serializable{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String userId;
-	private String password;
-	private String encryptedPassword;
+	
 	
 	public String getFirstName() {
 		return firstName;
@@ -40,16 +36,6 @@ public class UserDto implements Serializable{
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String senha) {
-		this.password = senha;
-	}
-	public String getEncryptedPassword() {
-		return encryptedPassword;
-	}
-	public void setEncryptedPassword(String encryptedPassword) {
-		this.encryptedPassword = encryptedPassword;
-	}
+	
+
 }

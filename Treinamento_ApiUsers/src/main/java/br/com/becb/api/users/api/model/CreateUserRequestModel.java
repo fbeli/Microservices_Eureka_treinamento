@@ -18,7 +18,7 @@ public class CreateUserRequestModel {
 	private String userId;
 	@NotNull
 	@Size(min = 6, message = "coloca algo maior que 6, que tal?")
-	private String senha;
+	private String password;
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -40,12 +40,12 @@ public class CreateUserRequestModel {
 		this.userId = userId;
 	}
 
-	public String getSenha() {
-		return senha;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	public String getFirstName() {
