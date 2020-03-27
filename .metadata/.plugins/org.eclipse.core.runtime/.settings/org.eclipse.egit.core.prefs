@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Desenvolvimento\\workspaces\\curso\\TreinamentoMicroservices\\.git;
-GitRepositoriesView.GitDirectories.relative=TreinamentoMicroservices\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Desenvolvimento\\workspaces\\curso\\.git;C\:\\Desenvolvimento\\workspaces\\curso\\TreinamentoMicroservices\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;TreinamentoMicroservices\\.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
