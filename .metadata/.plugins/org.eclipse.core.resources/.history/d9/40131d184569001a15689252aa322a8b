@@ -1,5 +1,0 @@
-package br.com.becb.api.users.controllers;
-
-public class UsersController {
-
-}

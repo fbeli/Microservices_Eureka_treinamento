@@ -31,7 +31,14 @@ public class UsersController {
 	@GetMapping("/status/check")
 	public String status() {		
 		System.out.println("IP de Origem: "+env.getProperty("gateway.ip"));
-		return "working on port:-> "+env.getProperty("local.server.port");
+		return "working on port:-> "+env.getProperty("local.server.port") + 
+				" <p>with Token: "+env.getProperty("token.secret")+
+				" <p>with mensagem: "+env.getProperty("mensagem.pra.vc");
+		 
+			
+		
+		
+		
 	}
 	@GetMapping("/status/env")
 	public String env() {		
